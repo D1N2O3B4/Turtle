@@ -104,36 +104,59 @@ shelly.shape('turtle')
 #     shelly.circle(100)
 #     shelly.left(5)
 ##############################
-turtle.bgcolor('blue')
-shelly.begin_fill()
+# turtle.bgcolor('blue')
+# shelly.begin_fill()
 
-for i in range(4):
-    shelly.color('white')
-    shelly.forward(100)
-    shelly.left(90)
-shelly.end_fill()
-
-
-shelly.begin_fill()
-shelly.goto(5,50)
-for i in range(4):
-    shelly.color('yellow')
-    shelly.forward(20)
-    shelly.left(90)
-shelly.end_fill()
-shelly.penup()
+# for i in range(4):
+#     shelly.color('white')
+#     shelly.forward(100)
+#     shelly.left(90)
+# shelly.end_fill()
 
 
-shelly.begin_fill()
-shelly.goto(-10,100)
-shelly.pendown()
-for i in range(3):
-    shelly.speed(1)
-    shelly.color('red')
-    shelly.forward(120)
-    shelly.left(120)
-shelly.end_fill()
+# shelly.begin_fill()
+# shelly.goto(5,50)
+# for i in range(4):
+#     shelly.color('yellow')
+#     shelly.forward(20)
+#     shelly.left(90)
+# shelly.end_fill()
+# shelly.penup()
+
+
+# shelly.begin_fill()
+# shelly.goto(-10,100)
+# shelly.pendown()
+# for i in range(3):
+#     shelly.speed(1)
+#     shelly.color('red')
+#     shelly.forward(120)
+#     shelly.left(120)
+# shelly.end_fill()
+# shelly.hideturtle()
+##########################
+turtle.bgcolor('black')
 shelly.hideturtle()
 
+colors = ['red', 'yellow', 'blue', 'orange','green', 'purple']
+j = 0
+for i in range(36):
+    shelly.speed(10)
+    shelly.penup()
+    shelly.forward(200)
+    for k in range(8):
+        if j >= len(colors):
+            j = 0
+            shelly.color(colors[j])
+        else:
+            shelly.color(colors[j])
+            j+=1
+        shelly.pendown()
+        shelly.circle(5)
+        shelly.penup()
+        shelly.back(20)
+        print(j)
+    shelly.goto(0,0)
+    shelly.right(10)
 
 turtle.done()
