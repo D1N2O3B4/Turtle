@@ -94,7 +94,7 @@ shelly.shape('turtle')
 # colors = ['red', 'yellow', 'blue', 'orange','green', 'purple']
 # j = 0
 
-# turtle.bgcolor('black')
+turtle.bgcolor('black')
 # for i in range(72):
 #     shelly.speed(10)
 #     shelly.color(colors[j])
@@ -135,28 +135,60 @@ shelly.shape('turtle')
 # shelly.end_fill()
 # shelly.hideturtle()
 ##########################
-turtle.bgcolor('black')
+# turtle.bgcolor('black')
 shelly.hideturtle()
 
 colors = ['red', 'yellow', 'blue', 'orange','green', 'purple']
-j = 0
-for i in range(36):
-    shelly.speed(10)
-    shelly.penup()
-    shelly.forward(200)
-    for k in range(8):
-        if j >= len(colors):
-            j = 0
-            shelly.color(colors[j])
-        else:
-            shelly.color(colors[j])
-            j+=1
-        shelly.pendown()
-        shelly.circle(5)
-        shelly.penup()
-        shelly.back(20)
-        print(j)
-    shelly.goto(0,0)
-    shelly.right(10)
+# j = 0
+# for _ in range(36):
+#     shelly.speed(10)
+#     shelly.penup()
+#     shelly.forward(200)
+#     for _ in range(8):
+#         if j >= len(colors):
+#             j = 0
+#             shelly.color(colors[j])
+#         else:
+#             shelly.color(colors[j])
+#             j+=1
+#         shelly.pendown()
+#         shelly.circle(5)
+#         shelly.penup()
+#         shelly.back(20)
+#     shelly.goto(0,0)
+#     shelly.right(10)
+import random
+
+# size = 14
+# j = 0
+# for _ in range(36):
+#     shelly.penup()
+#     shelly.forward(200)
+#     for _ in range(6):
+#         p = random.randint(0,len(colors)-1)
+#         shelly.color(colors[p])
+#         shelly.pendown()
+#         shelly.circle(size)
+#         size -= 2
+#         shelly.penup()
+#         shelly.penup()
+#         shelly.back(30)
+#         if _ == 5:
+#             size = 14
+#     shelly.goto(0,0)
+#     shelly.right(10)
+shelly.penup()
+shelly.goto(-300,300)
+shelly.pendown()
+# shelly.showturtle()
+shelly.color(colors[0])
+size = 600
+shelly.right(90)
+shelly.forward(600)
+for _ in range(300):
+    shelly.color(colors[random.randint(0,len(colors)-1)])
+    shelly.left(90)
+    shelly.forward(size)
+    size -= 2
 
 turtle.done()
