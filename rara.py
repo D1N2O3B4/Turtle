@@ -8,3 +8,4 @@ url.urlretrieve('https://gist.github.com/BirajCoder/a4ffcb76fd6fb221d76ac2ee2b85
 data = np.genfromtxt('climate.txt',delimiter=',',skip_header=1)
 
 print(data)
+print(type(data))
