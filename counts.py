@@ -11,3 +11,9 @@ print(b)
 Human = namedtuple('Human',['name','age','height'])
 d = Human(name="David",age="22",height=187)
 print(d)
+
+
+dark = deque()
+dark.append(3)
+dark.appendleft(23)
+print(dark)
